@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego naipes</title>
+    <script lang="javascript" type="text/javascript">
+    
+        var aleatorio = Math.round(Math.random()*4);
+        aleatorio++;
+    function verNaipe(numero) {
+
+        naipe = document.getElementById('naipe'+numero);
+        if (numero == aleatorio) {
+            naipe.innerHTML = '<img src = "img/bien.png"/>';    
+        } else {
+            naipe.innerHTML = '<img src = "img/mal.png"/>';
+        }
+        
+        
+    }
+    
+    
+    
+    </script>
+
+</head>
+
+<style type="text/css">
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    width: 790px;
+    margin: 0 auto;
+
+}
+h1{
+    text-align: center;
+    font-size: 18px;
+    color: #936b13;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.naipe{
+    width: 150px;
+    height: 250px;
+    float: left;
+}
+.margenderecho{
+    margin-right: 10px;
+}
+#naipe1b, #naipe2b, #naipe3b{
+    display: none;
+}
+</style>
+
+
+
+
+<body>
+    <section>
+        <h1>Los Naipes del Azar</h1>
+        
+        <a href="#"  class="naipe margenderecho" onclick="verNaipe(1)" id="naipe1">
+            <img src="img/naipeDetras.png" >
+           
+        </a>
+
+        <a href="#" class="naipe margenderecho" onclick="verNaipe(2)" id="naipe2">
+            <img src="img/naipeDetras.png" >
+            
+        </a>
+
+        <a href="#" class="naipe margenderecho" onclick="verNaipe(3)" id="naipe3">
+            <img src="img/naipeDetras.png" >
+            
+        </a>
+        
+        <a href="#" class="naipe margenderecho" onclick="verNaipe(4)" id="naipe4">
+            <img src="img/naipeDetras.png" >
+            
+        </a>
+        
+        <a href="#" class="naipe" onclick="verNaipe(5)" id="naipe5">
+            <img src="img/naipeDetras.png" >
+            
+        </a>
+    
+    
+    </section>
+</body>
+</html>
